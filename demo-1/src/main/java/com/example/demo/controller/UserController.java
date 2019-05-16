@@ -35,7 +35,7 @@ public class UserController {
         return repository.findById(username);
     }
 
-    @PostMapping(consumes = "application/json")
+    @PostMapping(path = "/create",consumes = "application/json")
     public User create(@RequestBody User user) {
         return repository.save(user);
     }
